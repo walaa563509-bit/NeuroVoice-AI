@@ -32,10 +32,8 @@ try:
     feature_names = list(model.feature_names_in_)
     st.success("AI Model loaded successfully!")
 
-    uploaded_file = st.file_uploader(
-        "Upload Voice Features CSV",
-        type=["csv"]
-    )
+    uploaded_file = st.file_uploader("Upload Voice Features CSV")
+    
 
     if uploaded_file is not None:
         data = pd.read_csv(uploaded_file)
